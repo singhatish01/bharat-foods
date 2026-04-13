@@ -135,7 +135,7 @@ main {
     url("Public/Images/Our story sectin hompage/right.png");
   background-repeat: no-repeat, no-repeat;
   background-position: left bottom, right bottom;
-  background-size: 10rem auto, 5.25rem auto;
+  background-size: 5rem auto, 10.5rem auto;
 }
 
 @media (min-width: 640px) {
@@ -144,12 +144,12 @@ main {
   }
 
   .about-section-art {
-    background-size: 13rem auto, 7rem auto;
+    background-size: 6.5rem auto, 14rem auto;
   }
 }
 
 @media (min-width: 1024px) {
   .about-section-art {
-    background-size: 18rem auto, 9rem auto;
+    background-size: 9rem auto, 18rem auto;
   }
 }
