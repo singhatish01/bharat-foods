@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bharat Foods</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">Bharat Foods</a>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <h1 class="hero__title">Authentic Indian<br/>Flavours, Delivered.</h1>
+      <p class="hero__sub">Fresh. Traditional. Bharat.</p>
+      <a href="#contact" class="btn">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section__title">Who We Are</h2>
+      <p class="section__body">Bharat Foods brings the richness of India's culinary heritage to your table. From hand-picked spices to ready-to-cook essentials, every product is crafted with care and authenticity.</p>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section section--alt" id="products">
+    <div class="container">
+      <h2 class="section__title">Our Products</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card__icon">🌶️</div>
+          <h3 class="card__title">Spices & Masalas</h3>
+          <p class="card__body">Bold, aromatic blends sourced from the finest farms across India.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🍚</div>
+          <h3 class="card__title">Rice & Grains</h3>
+          <p class="card__body">Premium basmati, brown rice, and heritage grains for every meal.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🫙</div>
+          <h3 class="card__title">Pickles & Chutneys</h3>
+          <p class="card__body">Traditional recipes, slow-crafted for the authentic homemade taste.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🍫</div>
+          <h3 class="card__title">Sweets & Snacks</h3>
+          <p class="card__body">Festival favourites and everyday treats that bring joy to every bite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section__title">Get in Touch</h2>
+      <form class="form" onsubmit="handleSubmit(event)">
+        <input class="form__input" type="text" placeholder="Your Name" required/>
+        <input class="form__input" type="email" placeholder="Email Address" required/>
+        <textarea class="form__input form__textarea" placeholder="Your Message" rows="4" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+        <p class="form__success" id="formSuccess">Thanks! We'll be in touch soon.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Bharat Foods. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
