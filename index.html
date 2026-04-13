@@ -128,87 +128,52 @@
     </div>
   </section>
 
-  <!-- ── COMING FROM OUR KITCHEN ──────────────────────────────── -->
+  <!-- ── CATEGORIES (EXPANDING ACCORDION) ────────────────────────── -->
+  <section class="relative py-12 sm:py-16 lg:py-20 bg-[#f8f9fa]">
+    <div class="absolute inset-0 z-0" aria-hidden="true">
+      <img src="Public/Images/secion bg.jpg" alt="" class="w-full h-full object-cover opacity-20" />
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-4xl lg:text-6xl font-bold text-brand-green logo-font">Choose Our Best Category</h2>
+        <p class="text-gray-500 mt-2 max-w-2xl mx-auto font-medium">Explore our wide range of authentic Indian ingredients.</p>
+      </div>
 
-
-  <section class="py-12 sm:py-16 lg:py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-end justify-between mb-10">
-        <div>
-          <p class="text-brand-orange text-xs font-semibold tracking-[0.2em] uppercase mb-1">Fresh &amp; Delicious</p>
-          <h2 class="text-2xl lg:text-3xl font-bold text-gray-900">Coming from our Kitchen</h2>
+      <div class="category-accordion">
+        <div class="cat-card">
+          <img src="Public/Images/garam_masala.png" alt="Spices" class="cat-card-bg" loading="lazy" />
+          <div class="cat-card-overlay">
+            <h3 class="cat-card-title">Spices</h3>
+            <p class="cat-card-desc">Authentic blends and whole spices for rich flavor.</p>
+          </div>
         </div>
-        <a href="#" class="hidden sm:inline-flex items-center gap-1 text-sm font-semibold text-brand-green hover:text-brand-green-dark transition-colors duration-200 cursor-pointer">
-          View All
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        <div class="cat-card">
+          <img src="Public/Images/basmati_rice.png" alt="Grains & Staples" class="cat-card-bg" loading="lazy" />
+          <div class="cat-card-overlay">
+            <h3 class="cat-card-title">Grains &amp; Staples</h3>
+            <p class="cat-card-desc">Premium basmati rice, lentils, and everyday essentials.</p>
+          </div>
+        </div>
+        <div class="cat-card">
+          <img src="Public/Images/mango_pickle.png" alt="Pickles & Chutneys" class="cat-card-bg" loading="lazy" />
+          <div class="cat-card-overlay">
+            <h3 class="cat-card-title">Pickles &amp; Chutneys</h3>
+            <p class="cat-card-desc">Traditional sun-dried pickles and tangy relishes.</p>
+          </div>
+        </div>
+        <div class="cat-card">
+          <img src="Public/Images/besan_ladoo.png" alt="Sweets & Snacks" class="cat-card-bg" loading="lazy" />
+          <div class="cat-card-overlay">
+            <h3 class="cat-card-title">Sweets &amp; Snacks</h3>
+            <p class="cat-card-desc">Handcrafted treats to satisfy your cravings.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="#products" class="inline-block border-2 border-brand-green bg-brand-green text-white hover:bg-brand-green-dark hover:border-brand-green-dark font-semibold px-10 py-3 rounded-full transition-all duration-200 cursor-pointer shadow-md">
+          Explore All Categories
         </a>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Card template × 4 -->
-        <!-- 1 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer product-card">
-          <div class="relative overflow-hidden aspect-square">
-            <img src="Public/Images/samosas.png" alt="Crispy Samosas" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"/>
-            <span class="absolute top-3 left-3 bg-brand-green text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow-lg">Snacks</span>
-          </div>
-          <div class="p-5">
-            <h3 class="font-bold text-gray-900 mb-1">Crispy Samosas</h3>
-            <p class="text-gray-500 text-sm mb-4 line-clamp-2">Golden-fried pastry pockets filled with spiced potatoes and peas.</p>
-            <a href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-green hover:text-brand-green-dark transition-colors duration-200">
-              View Recipe <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </div>
-        <!-- 2 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer product-card">
-          <div class="relative overflow-hidden aspect-square">
-            <img src="Public/Images/coconut_rice.png" alt="Coconut Rice" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"/>
-            <span class="absolute top-3 left-3 bg-brand-green text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow-lg">Rice</span>
-          </div>
-          <div class="p-5">
-            <h3 class="font-bold text-gray-900 mb-1">Coconut Rice</h3>
-            <p class="text-gray-500 text-sm mb-4 line-clamp-2">Fragrant basmati cooked with fresh coconut and curry leaves.</p>
-            <a href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-green hover:text-brand-green-dark transition-colors duration-200">
-              View Recipe <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </div>
-        <!-- 3 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer product-card">
-          <div class="relative overflow-hidden aspect-square">
-            <img src="Public/Images/butter_chicken.png" alt="Butter Chicken" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"/>
-            <span class="absolute top-3 left-3 bg-brand-orange text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow-lg">Curries</span>
-          </div>
-          <div class="p-5">
-            <h3 class="font-bold text-gray-900 mb-1">Butter Chicken</h3>
-            <p class="text-gray-500 text-sm mb-4 line-clamp-2">Rich, creamy tomato-based curry with tender chicken pieces.</p>
-            <a href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-green hover:text-brand-green-dark transition-colors duration-200">
-              View Recipe <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </div>
-        <!-- 4 -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer product-card">
-          <div class="relative overflow-hidden aspect-square">
-            <img src="Public/Images/gulab_jamun.png" alt="Gulab Jamun" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"/>
-            <span class="absolute top-3 left-3 bg-brand-green text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow-lg">Sweets</span>
-          </div>
-          <div class="p-5">
-            <h3 class="font-bold text-gray-900 mb-1">Gulab Jamun</h3>
-            <p class="text-gray-500 text-sm mb-4 line-clamp-2">Soft milk-solid dumplings soaked in rose-flavoured sugar syrup.</p>
-            <a href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-green hover:text-brand-green-dark transition-colors duration-200">
-              View Recipe <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pagination dots -->
-      <div class="flex justify-center gap-2 mt-8" role="tablist" aria-label="Carousel pages">
-        <button class="w-8 h-2 bg-brand-green rounded-full cursor-pointer" aria-label="Page 1" role="tab" aria-selected="true"></button>
-        <button class="w-2 h-2 bg-gray-300 rounded-full cursor-pointer" aria-label="Page 2" role="tab" aria-selected="false"></button>
-        <button class="w-2 h-2 bg-gray-300 rounded-full cursor-pointer" aria-label="Page 3" role="tab" aria-selected="false"></button>
       </div>
     </div>
   </section>
@@ -216,9 +181,9 @@
   <!-- ── OUR FAVOURITE THINGS (FEATURED PRODUCTS) ─────────────── -->
   <section class="py-12 sm:py-16 lg:py-20 bg-white" id="products">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10">
-        <p class="text-brand-orange text-xs font-semibold tracking-[0.2em] uppercase mb-2">Shop Now</p>
-        <h2 class="text-2xl lg:text-3xl font-bold text-gray-900">Our Favourite Things</h2>
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10">
+        <h2 class="text-4xl lg:text-6xl font-bold text-brand-green logo-font leading-tight">Our Products Range</h2>
+        <p class="text-gray-500 text-sm sm:text-base leading-relaxed max-w-sm sm:max-w-xs lg:max-w-sm">Our products take you on a taste adventure, crafted with the perfect balance of tradition, quality, and authenticity.</p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -233,9 +198,8 @@
           <div class="p-5">
             <h3 class="font-bold text-gray-900 text-base mb-1">Garam Masala Blend</h3>
             <p class="text-gray-500 text-xs mb-4">Premium whole spice blend, stone-ground</p>
-            <div class="flex items-center justify-between">
-              <span class="text-lg font-extrabold text-brand-green">$8.99</span>
-              <button class="add-to-cart bg-brand-orange hover:bg-brand-orange/90 text-white text-xs font-bold px-5 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">Add to Cart</button>
+            <div class="flex items-center justify-start">
+              <button class="add-to-cart bg-brand-orange hover:bg-brand-orange/90 text-white text-xs font-bold px-6 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">Enquire Now</button>
             </div>
           </div>
         </div>
@@ -249,9 +213,8 @@
           <div class="p-5">
             <h3 class="font-bold text-gray-900 text-base mb-1">Premium Basmati Rice</h3>
             <p class="text-gray-500 text-xs mb-4">Aged long-grain, naturally aromatic</p>
-            <div class="flex items-center justify-between">
-              <span class="text-lg font-extrabold text-brand-green">$12.99</span>
-              <button class="add-to-cart bg-brand-orange hover:bg-brand-orange/90 text-white text-xs font-bold px-5 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">Add to Cart</button>
+            <div class="flex items-center justify-start">
+              <button class="add-to-cart bg-brand-orange hover:bg-brand-orange/90 text-white text-xs font-bold px-6 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">Enquire Now</button>
             </div>
           </div>
         </div>
@@ -265,9 +228,8 @@
           <div class="p-5">
             <h3 class="font-bold text-gray-900 text-base mb-1">Traditional Mango Pickle</h3>
             <p class="text-gray-500 text-xs mb-4">Sun-dried raw mango, mustard oil blend</p>
-            <div class="flex items-center justify-between">
-              <span class="text-lg font-extrabold text-brand-green">$6.99</span>
-              <button class="add-to-cart bg-brand-orange hover:bg-brand-orange/90 text-white text-xs font-bold px-5 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">Add to Cart</button>
+            <div class="flex items-center justify-start">
+              <button class="add-to-cart bg-brand-orange hover:bg-brand-orange/90 text-white text-xs font-bold px-6 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">Enquire Now</button>
             </div>
           </div>
         </div>
@@ -281,9 +243,70 @@
           <div class="p-5">
             <h3 class="font-bold text-gray-900 text-base mb-1">Besan Ladoo</h3>
             <p class="text-gray-500 text-xs mb-4">Handcrafted chickpea flour sweets</p>
-            <div class="flex items-center justify-between">
-              <span class="text-lg font-extrabold text-brand-green">$9.99</span>
-              <button class="add-to-cart bg-brand-orange hover:bg-brand-orange/90 text-white text-xs font-bold px-5 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">Add to Cart</button>
+            <div class="flex items-center justify-start">
+              <button class="add-to-cart bg-brand-orange hover:bg-brand-orange/90 text-white text-xs font-bold px-6 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">Enquire Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- ROW 2 (Duplicated) -->
+        <!-- 5 -->
+        <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 group cursor-pointer product-card">
+          <div class="relative overflow-hidden aspect-[4/3]">
+            <img src="Public/Images/garam_masala.png" alt="Turmeric Powder" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute top-0 left-0 right-0 bg-brand-green/90 text-white text-[10px] uppercase tracking-widest font-bold py-1.5 text-center">Spices &amp; Masalas</div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 text-base mb-1">Turmeric Powder</h3>
+            <p class="text-gray-500 text-xs mb-4">Golden, aromatic pure turmeric</p>
+            <div class="flex items-center justify-start">
+              <button class="add-to-cart bg-brand-orange hover:bg-brand-orange/90 text-white text-xs font-bold px-6 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">Enquire Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- 6 -->
+        <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 group cursor-pointer product-card">
+          <div class="relative overflow-hidden aspect-[4/3]">
+            <img src="Public/Images/basmati_rice.png" alt="Toor Dal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute top-0 left-0 right-0 bg-brand-green/90 text-white text-[10px] uppercase tracking-widest font-bold py-1.5 text-center">Lentils &amp; Pulses</div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 text-base mb-1">Premium Toor Dal</h3>
+            <p class="text-gray-500 text-xs mb-4">Unpolished, protein-rich lentils</p>
+            <div class="flex items-center justify-start">
+              <button class="add-to-cart bg-brand-orange hover:bg-brand-orange/90 text-white text-xs font-bold px-6 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">Enquire Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- 7 -->
+        <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 group cursor-pointer product-card">
+          <div class="relative overflow-hidden aspect-[4/3]">
+            <img src="Public/Images/mango_pickle.png" alt="Mixed Veg Pickle" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute top-0 left-0 right-0 bg-brand-green/90 text-white text-[10px] uppercase tracking-widest font-bold py-1.5 text-center">Pickles &amp; Chutneys</div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 text-base mb-1">Mixed Veg Pickle</h3>
+            <p class="text-gray-500 text-xs mb-4">Spicy, tangy mixed vegetable medley</p>
+            <div class="flex items-center justify-start">
+              <button class="add-to-cart bg-brand-orange hover:bg-brand-orange/90 text-white text-xs font-bold px-6 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">Enquire Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- 8 -->
+        <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 group cursor-pointer product-card">
+          <div class="relative overflow-hidden aspect-[4/3]">
+            <img src="Public/Images/besan_ladoo.png" alt="Motichoor Ladoo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute top-0 left-0 right-0 bg-brand-green/90 text-white text-[10px] uppercase tracking-widest font-bold py-1.5 text-center">Sweets &amp; Snacks</div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 text-base mb-1">Motichoor Ladoo</h3>
+            <p class="text-gray-500 text-xs mb-4">Melt-in-mouth golden sweet pearls</p>
+            <div class="flex items-center justify-start">
+              <button class="add-to-cart bg-brand-orange hover:bg-brand-orange/90 text-white text-xs font-bold px-6 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">Enquire Now</button>
             </div>
           </div>
         </div>
@@ -298,7 +321,7 @@
   <!-- ── WHY CHOOSE US ─────────────────────────────────────────── -->
   <section class="relative py-14 sm:py-20 lg:py-28 overflow-hidden">
     <div class="absolute inset-0" aria-hidden="true">
-      <img src="Public/Images/Hero image.webp" alt="" class="w-full h-full object-cover"/>
+      <video src="https://res.cloudinary.com/dbeyj3uqu/video/upload/v1776114333/spice_grind_gebp3a.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
       <div class="absolute inset-0 bg-brand-green-dark/85"></div>
     </div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -371,106 +394,214 @@
   </section>
 
   <!-- ── THE PROMISE ───────────────────────────────────────────── -->
-  <section class="py-12 sm:py-16 lg:py-24" style="background-color:#E8F4F8;">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <p class="text-brand-orange text-xs font-semibold tracking-[0.2em] uppercase mb-2">Our Values</p>
-        <h2 class="text-2xl lg:text-3xl font-bold text-gray-900">The <span class="logo-font text-brand-green text-3xl lg:text-4xl">Bharat</span> Promise</h2>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- 1 -->
-        <div class="bg-white rounded-2xl p-6 text-center hover:shadow-md transition-shadow duration-200">
-          <div class="w-16 h-16 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-          </div>
-          <h3 class="font-bold text-gray-900 mb-2">Family Owned</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">A family business built on love, trust, and generations of culinary passion.</p>
+  <section class="py-16 sm:py-20 lg:py-28 overflow-hidden relative" style="background-color:#E9F5F8;">
+    <!-- Abstract decorative elements -->
+    <div class="absolute top-8 right-1/4 w-32 h-6 bg-white rounded-full opacity-80 blur-[2px] transform -rotate-3"></div>
+    <div class="absolute -bottom-10 right-0 opacity-10 pointer-events-none w-64 h-64 bg-brand-orange rounded-full blur-3xl"></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-[42%_1fr] gap-12 lg:gap-20 items-center">
+        <!-- Left: Image with green background block -->
+        <div class="relative max-w-[400px] mx-auto lg:max-w-none w-full mt-4 lg:mt-0">
+          <!-- Green decorative patch behind -->
+          <div class="absolute -top-4 -left-4 sm:-top-5 sm:-left-5 w-[80%] h-full bg-[#417623] rounded-tl-[40px] rounded-bl-[10px] rounded-r-[10px]" aria-hidden="true"></div>
+          <!-- Decorative orange shape top center -->
+          <div class="absolute -top-12 left-1/2 w-12 h-6 bg-[#fcb23b] rounded-t-full opacity-60"></div>
+          <!-- Main image using the butter chicken asset to match the reddish dish in the ref -->
+          <img src="Public/Images/butter_chicken.png" alt="Bharat Promise" class="relative z-10 w-full aspect-square sm:aspect-auto h-auto rounded-[30px] shadow-2xl object-cover" />
         </div>
-        <!-- 2 -->
-        <div class="bg-white rounded-2xl p-6 text-center hover:shadow-md transition-shadow duration-200">
-          <div class="w-16 h-16 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+
+        <!-- Right: Content -->
+        <div class="pl-0 lg:pl-6">
+          <h2 class="logo-font text-brand-green text-4xl sm:text-5xl lg:text-[3.5rem] font-bold mb-4 tracking-wide leading-tight">The Bharat Promise</h2>
+          <p class="text-gray-800 font-bold mb-10 text-sm sm:text-base tracking-wide">Purity | Heritage | Trust | Community</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10">
+            <!-- 1. AUTHENTICITY -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex-shrink-0 flex items-center justify-center text-white shadow-sm" style="background-color: #6a36bc;">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-8 7 8m0-8v12" />
+                </svg>
+              </div>
+              <div class="mt-1">
+                <h3 class="font-bold text-gray-900 mb-1 text-base sm:text-lg tracking-wide">AUTHENTICITY</h3>
+                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed pr-2">Bringing you the purest, most natural ingredients—sourced with care, just as nature intended.</p>
+              </div>
+            </div>
+
+            <!-- 2. TRADITION -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex-shrink-0 flex items-center justify-center text-white shadow-sm" style="background-color: #3795df;">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <!-- Simplified dots/circle icon -->
+                  <circle cx="12" cy="12" r="7" stroke="currentColor" stroke-width="2" />
+                  <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none" />
+                  <circle cx="9" cy="12" r="1" fill="currentColor" stroke="none" />
+                  <circle cx="15" cy="12" r="1" fill="currentColor" stroke="none" />
+                  <circle cx="12" cy="9" r="1" fill="currentColor" stroke="none" />
+                  <circle cx="12" cy="15" r="1" fill="currentColor" stroke="none" />
+                </svg>
+              </div>
+              <div class="mt-1">
+                <h3 class="font-bold text-gray-900 mb-1 text-base sm:text-lg tracking-wide">TRADITION</h3>
+                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed pr-2">Honoring time-honored recipes and age-old wisdom to deliver flavors that feel like home.</p>
+              </div>
+            </div>
+
+            <!-- 3. TRUST -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex-shrink-0 flex items-center justify-center text-white shadow-sm" style="background-color: #fcb23b;">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div class="mt-1">
+                <h3 class="font-bold text-gray-900 mb-1 text-base sm:text-lg tracking-wide">TRUST</h3>
+                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed pr-2">Committed to transparency, quality, and ethical sourcing—so you get nothing but the best.</p>
+              </div>
+            </div>
+
+            <!-- 4. PURPOSE -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex-shrink-0 flex items-center justify-center text-white shadow-sm" style="background-color: #175a1d;">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </div>
+              <div class="mt-1">
+                <h3 class="font-bold text-gray-900 mb-1 text-base sm:text-lg tracking-wide">PURPOSE</h3>
+                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed pr-2">Empowering communities, supporting sustainable practices, and spreading the joy of real food.</p>
+              </div>
+            </div>
           </div>
-          <h3 class="font-bold text-gray-900 mb-2">Made with Love</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Every recipe carries the warmth of home cooking and the care of a loving kitchen.</p>
-        </div>
-        <!-- 3 -->
-        <div class="bg-white rounded-2xl p-6 text-center hover:shadow-md transition-shadow duration-200">
-          <div class="w-16 h-16 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
-          </div>
-          <h3 class="font-bold text-gray-900 mb-2">Quality Ingredients</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Only the finest, hand-selected ingredients make it into our products.</p>
-        </div>
-        <!-- 4 -->
-        <div class="bg-white rounded-2xl p-6 text-center hover:shadow-md transition-shadow duration-200">
-          <div class="w-16 h-16 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-          </div>
-          <h3 class="font-bold text-gray-900 mb-2">Fast Delivery</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Fresh to your door with reliable, tracked shipping across Australia.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ── TESTIMONIALS ──────────────────────────────────────────── -->
-  <section class="py-12 sm:py-16 lg:py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10 sm:mb-12">
-        <p class="text-brand-orange text-xs font-semibold tracking-[0.2em] uppercase mb-2">Reviews</p>
-        <h2 class="text-2xl lg:text-3xl font-bold text-gray-900">Fulfilment Ambassadors</h2>
+  <section class="relative py-16 sm:py-20 lg:py-28 bg-[#fafafa]">
+    <!-- background texture -->
+    <div class="absolute inset-0 z-0" aria-hidden="true">
+      <img src="Public/Images/secion bg.jpg" alt="" class="w-full h-full object-cover opacity-10" />
+    </div>
+    
+    <div class="relative z-10 max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="text-center mb-12 sm:mb-16">
+        <h2 class="text-4xl lg:text-[3.5rem] font-bold text-brand-green logo-font mb-4">Customer Experiences</h2>
+        <p class="text-gray-800 font-semibold text-lg tracking-wide">What Our Customers Say</p>
       </div>
-      <!-- Stars helper -->
-      <template id="starFull">
-        <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-      </template>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
-        <!-- 1 -->
-        <div class="text-center">
-          <img src="https://placehold.co/100x100/E8F4F8/2D6A2F?text=A" alt="Customer Anjali Sharma" class="w-24 h-24 rounded-full object-cover mx-auto border-4 border-brand-green mb-4" loading="lazy" width="100" height="100"/>
-          <div class="flex justify-center gap-0.5 mb-3" aria-label="5 out of 5 stars">
-            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      <!-- Carousel arrows (decorative) -->
+      <button class="hidden lg:flex absolute left-4 top-[55%] -translate-y-1/2 w-9 h-9 bg-[#417623] hover:bg-[#325c1a] text-white rounded-full items-center justify-center shadow-md transition-colors z-20" aria-label="Previous">
+        <svg class="w-5 h-5 mr-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+      </button>
+      <button class="hidden lg:flex absolute right-4 top-[55%] -translate-y-1/2 w-9 h-9 bg-[#417623] hover:bg-[#325c1a] text-white rounded-full items-center justify-center shadow-md transition-colors z-20" aria-label="Next">
+        <svg class="w-5 h-5 ml-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+      </button>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-0 lg:px-8">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+          <div class="h-[220px] overflow-hidden">
+            <img src="Public/Images/coconut_rice.png" alt="Rice Dish" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
           </div>
-          <p class="text-gray-600 text-sm italic leading-relaxed mb-3">"The spices from Bharat Foods have completely transformed my cooking. Finally, authentic flavours that remind me of home!"</p>
-          <p class="font-semibold text-gray-900 text-sm">Anjali Sharma</p>
-          <p class="text-gray-400 text-xs">Melbourne, VIC</p>
+          <div class="p-6 text-center">
+            <p class="font-bold text-gray-800 mb-3 text-sm">Daniel M. -</p>
+            <p class="text-gray-500 text-[13px] leading-relaxed">"Finally, a brand that delivers purity without compromise. The lentils are fresh, the rice is fragrant."</p>
+          </div>
         </div>
-        <!-- 2 -->
-        <div class="text-center">
-          <img src="https://placehold.co/100x100/FDF8F0/E07B1A?text=R" alt="Customer Rajan Patel" class="w-24 h-24 rounded-full object-cover mx-auto border-4 border-brand-orange mb-4" loading="lazy" width="100" height="100"/>
-          <div class="flex justify-center gap-0.5 mb-3" aria-label="5 out of 5 stars">
-            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+          <div class="h-[220px] overflow-hidden bg-gray-50">
+            <img src="Public/Images/samosas.png" alt="Snacks" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
           </div>
-          <p class="text-gray-600 text-sm italic leading-relaxed mb-3">"Best basmati rice I've had outside of India. The quality is exceptional and it cooks perfectly every time."</p>
-          <p class="font-semibold text-gray-900 text-sm">Rajan Patel</p>
-          <p class="text-gray-400 text-xs">Sydney, NSW</p>
+          <div class="p-6 text-center">
+            <p class="font-bold text-gray-800 mb-3 text-sm">Priya K. -</p>
+            <p class="text-gray-500 text-[13px] leading-relaxed">"Bharat's snacks are my guilty pleasure! They remind me of festive gatherings at home, and the taste is unmatched!"</p>
+          </div>
         </div>
-        <!-- 3 -->
-        <div class="text-center">
-          <img src="https://placehold.co/100x100/E8F4F8/2D6A2F?text=P" alt="Customer Priya Nair" class="w-24 h-24 rounded-full object-cover mx-auto border-4 border-brand-green mb-4" loading="lazy" width="100" height="100"/>
-          <div class="flex justify-center gap-0.5 mb-3" aria-label="4 out of 5 stars">
-            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <!-- Card 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+          <div class="h-[220px] overflow-hidden">
+            <img src="Public/Images/butter_chicken.png" alt="Curry" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
           </div>
-          <p class="text-gray-600 text-sm italic leading-relaxed mb-3">"The mango pickle is absolutely divine. My whole family loves it and we order a new jar every month without fail."</p>
-          <p class="font-semibold text-gray-900 text-sm">Priya Nair</p>
-          <p class="text-gray-400 text-xs">Brisbane, QLD</p>
+          <div class="p-6 text-center">
+            <p class="font-bold text-gray-800 mb-3 text-sm">Ankit P. -</p>
+            <p class="text-gray-500 text-[13px] leading-relaxed">"The pickles and chutneys taste just like the ones my mom used to make. It feels like a taste of my childhood."</p>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+          <div class="h-[220px] overflow-hidden">
+            <img src="Public/Images/basmati_rice.png" alt="Grains" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+          </div>
+          <div class="p-6 text-center">
+            <p class="font-bold text-gray-800 mb-3 text-sm">Rohini S. -</p>
+            <p class="text-gray-500 text-[13px] leading-relaxed">"Bharat takes me back to the flavors I grew up with. The atta makes the softest rotis, just like my grandmother's!"</p>
+          </div>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- ── SOCIAL REELS & POSTS ──────────────────────────────────── -->
+  <section class="bg-white">
+    <!-- Header Bar -->
+    <div class="bg-[#DC9B32] py-4 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-[90rem] mx-auto flex flex-col sm:flex-row items-center justify-between text-white gap-4">
+        <h2 class="logo-font text-3xl sm:text-4xl font-bold drop-shadow-sm">#Bharat</h2>
+        <div class="flex items-center gap-3 font-semibold uppercase tracking-widest text-xs sm:text-sm text-white">
+          <span>Follow Bharat :</span>
+          <a href="#" class="hover:text-white/80 transition-colors" aria-label="Facebook">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="hover:text-white/80 transition-colors" aria-label="Instagram">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image / Reel Grid Embeds -->
+    <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        
+        <!-- Post 1 -->
+        <div class="w-full flex justify-center">
+          <blockquote class="instagram-media w-full" data-instgrm-permalink="https://www.instagram.com/p/DHJAlJjIDSx/?utm_source=ig_embed" data-instgrm-version="14" style=" background:#FFF; border:1px solid #f1f1f1; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.05); margin: 0; min-width:100%; padding:0; width:100%;"></blockquote>
+        </div>
+
+        <!-- Reel 2 -->
+        <div class="w-full flex justify-center">
+          <blockquote class="instagram-media w-full" data-instgrm-permalink="https://www.instagram.com/reel/DNySojJ2rPr/?utm_source=ig_embed" data-instgrm-version="14" style=" background:#FFF; border:1px solid #f1f1f1; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.05); margin: 0; min-width:100%; padding:0; width:100%;"></blockquote>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="w-full flex justify-center">
+          <blockquote class="instagram-media w-full" data-instgrm-permalink="https://www.instagram.com/p/DLAqAe3twQg/?utm_source=ig_embed" data-instgrm-version="14" style=" background:#FFF; border:1px solid #f1f1f1; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.05); margin: 0; min-width:100%; padding:0; width:100%;"></blockquote>
+        </div>
+
+        <!-- Branded Graphic Post -->
+        <div class="w-full h-full min-h-[400px]">
+          <div class="w-full h-full bg-white border border-gray-100 rounded-[12px] shadow-sm flex flex-col justify-center items-center p-6 text-center group hover:shadow-md transition-shadow">
+            <span class="logo-font text-5xl sm:text-6xl lg:text-7xl font-bold text-[#E23122] transition-transform duration-700 group-hover:scale-105">Bharat</span>
+            <span class="text-brand-green text-[10px] sm:text-xs tracking-widest font-bold uppercase mt-3 transition-transform duration-700 group-hover:scale-105">Trusted Quality</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <!-- Initialize Instagram Embeds -->
+    <script async src="//www.instagram.com/embed.js"></script>
   </section>
 
   <!-- ── BRAND BANNER / NEWSLETTER ────────────────────────────── -->
