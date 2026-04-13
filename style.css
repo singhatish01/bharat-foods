@@ -118,6 +118,7 @@ main {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  aspect-ratio: 2752 / 1536;
 }
 
 .hero-wave {
@@ -126,4 +127,10 @@ main {
 
 .hero-wave svg {
   height: auto;
+}
+
+@media (min-width: 640px) {
+  .hero-banner {
+    aspect-ratio: auto;
+  }
 }
