@@ -99,30 +99,36 @@
   </section>
 
   <!-- ── TAGLINE / ABOUT ────────────────────────────────────────── -->
-  <section class="py-12 sm:py-16 lg:py-24 bg-white" id="about">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 gap-8 md:gap-12 items-center">
+  <section class="py-16 sm:py-20 lg:py-28 bg-[#f0f2f5] relative overflow-hidden" id="about">
+    <!-- Illustration slots — absolute, outside the content column -->
+    <div class="absolute left-0 top-0 bottom-0 w-32 sm:w-44 lg:w-56 pointer-events-none" aria-hidden="true">
+      <!-- Left illustration goes here -->
+    </div>
+    <div class="absolute right-0 top-0 bottom-0 w-32 sm:w-44 lg:w-56 pointer-events-none" aria-hidden="true">
+      <!-- Right illustration goes here -->
+    </div>
 
-        <!-- Left: text (50%) -->
+    <div class="max-w-5xl mx-auto px-36 sm:px-48 lg:px-60">
+      <div class="grid grid-cols-2 gap-10 lg:gap-16 items-center">
+
+        <!-- Left: display heading only -->
         <div>
-          <p class="text-brand-orange text-xs font-semibold tracking-[0.2em] uppercase mb-3">Our Story</p>
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-5">
-            <span class="logo-font text-brand-green text-3xl sm:text-4xl lg:text-5xl">Bharat</span> — A Taste of<br/>Tradition, A Promise of Purity
+          <h2 class="font-display font-bold text-brand-green leading-tight text-2xl sm:text-3xl lg:text-[2.6rem]">
+            Bharat — A Taste of Tradition, A Promise of Purity
           </h2>
-          <p class="text-gray-600 leading-relaxed mb-4">
-            We believe food is more than sustenance — it's culture, memory, and love. Every product in our range is sourced directly from trusted Indian farmers and crafted using time-honoured recipes passed down through generations.
-          </p>
-          <p class="text-gray-600 leading-relaxed mb-8">
-            From hand-picked spices to aged basmati rice, our commitment is simple: bring you the purest, most authentic flavours of India, delivered fresh to your door.
-          </p>
-          <a href="#products" class="inline-block bg-brand-green hover:bg-brand-green-dark text-white font-semibold px-8 py-3 rounded-full transition-colors duration-200 cursor-pointer">
-            Explore Products
-          </a>
         </div>
 
-        <!-- Right: illustration placeholder (50%) -->
-        <div class="flex items-center justify-center h-full min-h-[280px] sm:min-h-[360px] rounded-2xl border-2 border-dashed border-gray-200 bg-gray-50">
-          <!-- Illustration goes here -->
+        <!-- Right: body + button -->
+        <div>
+          <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-4 text-justify">
+            Food is more than just nourishment — it's a connection to memories, traditions, and the warmth of home. At Bharat Foods, we bring you the purest, most authentic ingredients so that every meal is a reminder of flavours passed down through generations.
+          </p>
+          <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-8 text-justify">
+            We understand the longing for handmade rotis, the aroma of perfectly steamed rice, the comfort of wholesome lentils, and the joy of crispy snacks shared over chai. With every product, we bring not just food, but a piece of home, nostalgia, and a tradition of goodness.
+          </p>
+          <a href="#products" class="inline-block bg-brand-green hover:bg-brand-green-dark text-white text-sm font-semibold px-7 py-2.5 rounded transition-colors duration-200 cursor-pointer">
+            Read More
+          </a>
         </div>
 
       </div>
