@@ -131,8 +131,8 @@ main {
 
 .about-section-art {
   background-image:
-    url("Public/Images/Our story sectin hompage/left.svg"),
-    url("Public/Images/Our story sectin hompage/right.svg");
+    url("Public/Images/Our story sectin hompage/left.png"),
+    url("Public/Images/Our story sectin hompage/right.png");
   background-repeat: no-repeat, no-repeat;
   background-position: left bottom, right bottom;
   background-size: 10rem auto, 5.25rem auto;
