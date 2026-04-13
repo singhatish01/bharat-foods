@@ -118,7 +118,16 @@ main {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% auto;
-  aspect-ratio: 390 / 440;
+  aspect-ratio: 390 / 500;
+  min-height: 420px;
+}
+
+.hero-wave {
+  filter: drop-shadow(0 -10px 16px rgba(203, 170, 112, 0.18));
+}
+
+.hero-wave svg {
+  height: 72px;
 }
 
 @media (min-width: 640px) {
@@ -126,5 +135,9 @@ main {
     aspect-ratio: auto;
     background-position: center center;
     background-size: cover;
+  }
+
+  .hero-wave svg {
+    height: auto;
   }
 }
