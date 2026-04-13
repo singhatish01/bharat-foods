@@ -4,88 +4,620 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bharat Foods</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="description" content="Shop authentic Indian spices, pantry staples, sweets, and ready-to-cook favourites from Bharat Foods."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-green':       '#2D6A2F',
+            'brand-green-dark':  '#1A3D1B',
+            'brand-green-light': '#4A8C4D',
+            'brand-orange':      '#E07B1A',
+            'brand-amber':       '#F59E0B',
+          },
+          fontFamily: {
+            sans:    ['Poppins', 'sans-serif'],
+            display: ['Winky Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
 </head>
-<body>
+<body class="font-sans text-gray-800 bg-white antialiased" id="top">
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="container nav__inner">
-      <a href="/" class="nav__logo">Bharat Foods</a>
-      <ul class="nav__links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <!-- ── ANNOUNCEMENT BAR ─────────────────────────────────────── -->
+  <div class="bg-brand-green text-white text-center text-xs sm:text-sm py-2 px-4 font-medium tracking-wide">
+    <span class="hidden sm:inline">Free shipping on orders over $50 &nbsp;|&nbsp; Fresh from India to your doorstep</span>
+    <span class="sm:hidden">Free shipping over $50 — India to your door</span>
+  </div>
+
+  <!-- ── STICKY HEADER ─────────────────────────────────────────── -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+
+        <!-- Logo -->
+        <a href="#top" class="flex-shrink-0 leading-none flex items-center">
+          <img src="Public/Images/Logo.jpeg" alt="Bharat Foods logo" class="h-12 sm:h-14 lg:h-16 w-auto object-contain" loading="eager" />
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden lg:flex items-center gap-10" aria-label="Main">
+          <a href="#top"      class="text-sm font-semibold text-gray-800 hover:text-red-700 transition-colors duration-200 px-2 py-2">Home</a>
+          <a href="#about"    class="text-sm font-semibold text-gray-800 hover:text-red-700 transition-colors duration-200 px-2 py-2">About</a>
+          <a href="#products" class="text-sm font-semibold text-gray-800 hover:text-red-700 transition-colors duration-200 px-2 py-2">Products</a>
+          <a href="#"         class="text-sm font-semibold text-gray-800 hover:text-red-700 transition-colors duration-200 px-2 py-2">Blog</a>
+          <a href="#contact"  class="text-sm font-semibold text-gray-800 hover:text-red-700 transition-colors duration-200 px-2 py-2">Contact</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-3">
+          <button class="hidden lg:flex items-center gap-1.5 bg-brand-green hover:bg-brand-green-dark text-white text-sm font-medium px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer" aria-label="Search catalogue" id="searchBtn" type="button">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            Search
+          </button>
+          <button class="relative cursor-pointer" aria-label="Shopping cart" id="cartBtn" type="button">
+            <svg class="w-6 h-6 text-gray-700 hover:text-brand-green transition-colors duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            <span class="absolute -top-2 -right-2 bg-brand-orange text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center" id="cartCount">0</span>
+          </button>
+          <!-- Hamburger -->
+          <button class="lg:hidden cursor-pointer p-1" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" id="menuBtn" type="button">
+            <svg class="w-6 h-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
     </div>
-  </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero__inner">
-      <h1 class="hero__title">Authentic Indian<br/>Flavours, Delivered.</h1>
-      <p class="hero__sub">Fresh. Traditional. Bharat.</p>
-      <a href="#contact" class="btn">Get in Touch</a>
+    <!-- Mobile menu — py-3 gives each link min 44px touch target -->
+    <div class="lg:hidden hidden border-t border-gray-100 bg-white px-4 py-2 space-y-1" id="mobileMenu">
+      <a href="#top"      class="flex items-center text-base font-medium text-gray-700 hover:text-brand-green transition-colors duration-200 min-h-[44px] px-2">Home</a>
+      <a href="#about"    class="flex items-center text-base font-medium text-gray-700 hover:text-brand-green transition-colors duration-200 min-h-[44px] px-2">About</a>
+      <a href="#products" class="flex items-center text-base font-medium text-gray-700 hover:text-brand-green transition-colors duration-200 min-h-[44px] px-2">Products</a>
+      <a href="#"         class="flex items-center text-base font-medium text-gray-700 hover:text-brand-green transition-colors duration-200 min-h-[44px] px-2">Blog</a>
+      <a href="#contact"  class="flex items-center text-base font-medium text-gray-700 hover:text-brand-green transition-colors duration-200 min-h-[44px] px-2">Contact</a>
+    </div>
+  </header>
+
+  <!-- ── HERO ──────────────────────────────────────────────────── -->
+  <section class="relative overflow-hidden flex items-end" style="background-image: url('Public/Images/Hero image.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <!-- Scrim for text contrast -->
+    <div class="absolute inset-0 bg-brand-green-dark/60" aria-hidden="true"></div>
+
+    <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 lg:pt-20">
+      <div class="grid grid-cols-2 gap-4 sm:gap-8 lg:gap-12 items-end">
+
+        <!-- Left: display text -->
+        <div class="pb-14 sm:pb-20 lg:pb-28">
+          <h1 class="font-display font-bold leading-[1.15]" aria-label="Indian Flavors, Bharat Foods Trust">
+            <span class="block text-[clamp(0.9rem,3.5vw,2rem)] text-white/80 tracking-wide drop-shadow-md">Indian Flavors,</span>
+            <span class="block text-[clamp(1.6rem,7vw,5rem)] text-brand-amber italic drop-shadow-lg mt-0.5">Bharat Foods</span>
+            <span class="block text-[clamp(1rem,4vw,2.5rem)] text-white drop-shadow-md mt-0.5">Trust</span>
+          </h1>
+        </div>
+
+        <!-- Right: product image sits at the bottom of the hero -->
+        <div class="flex justify-center items-end">
+          <img
+            src="Public/Images/garam_masala.png"
+            alt="Bharat Foods authentic Indian spices"
+            class="w-[clamp(7rem,28vw,18rem)] object-contain drop-shadow-2xl"
+            loading="eager"
+            width="288" height="288"
+          />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Wave divider -->
+    <div class="absolute left-0 right-0" aria-hidden="true" style="bottom: -1px;">
+      <svg viewBox="0 0 1440 56" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full block">
+        <path d="M0 56L1440 56L1440 28C1200 56 900 0 720 28C540 56 240 0 0 28Z" fill="#ffffff" shape-rendering="geometricPrecision"/>
+      </svg>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="container">
-      <h2 class="section__title">Who We Are</h2>
-      <p class="section__body">Bharat Foods brings the richness of India's culinary heritage to your table. From hand-picked spices to ready-to-cook essentials, every product is crafted with care and authenticity.</p>
-    </div>
-  </section>
-
-  <!-- PRODUCTS -->
-  <section class="section section--alt" id="products">
-    <div class="container">
-      <h2 class="section__title">Our Products</h2>
-      <div class="grid">
-        <div class="card">
-          <div class="card__icon">🌶️</div>
-          <h3 class="card__title">Spices & Masalas</h3>
-          <p class="card__body">Bold, aromatic blends sourced from the finest farms across India.</p>
+  <!-- ── TAGLINE / ABOUT ────────────────────────────────────────── -->
+  <section class="py-12 sm:py-16 lg:py-24 bg-white" id="about">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div>
+          <p class="text-brand-orange text-xs font-semibold tracking-[0.2em] uppercase mb-3">Our Story</p>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-5">
+            <span class="logo-font text-brand-green text-3xl sm:text-4xl lg:text-5xl">Bharat</span> — A Taste of<br/>Tradition, A Promise of Purity
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            We believe food is more than sustenance — it's culture, memory, and love. Every product in our range is sourced directly from trusted Indian farmers and crafted using time-honoured recipes passed down through generations.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-8">
+            From hand-picked spices to aged basmati rice, our commitment is simple: bring you the purest, most authentic flavours of India, delivered fresh to your door.
+          </p>
+          <a href="#products" class="inline-block bg-brand-green hover:bg-brand-green-dark text-white font-semibold px-8 py-3 rounded-full transition-colors duration-200 cursor-pointer">
+            Explore Products
+          </a>
         </div>
-        <div class="card">
-          <div class="card__icon">🍚</div>
-          <h3 class="card__title">Rice & Grains</h3>
-          <p class="card__body">Premium basmati, brown rice, and heritage grains for every meal.</p>
-        </div>
-        <div class="card">
-          <div class="card__icon">🫙</div>
-          <h3 class="card__title">Pickles & Chutneys</h3>
-          <p class="card__body">Traditional recipes, slow-crafted for the authentic homemade taste.</p>
-        </div>
-        <div class="card">
-          <div class="card__icon">🍫</div>
-          <h3 class="card__title">Sweets & Snacks</h3>
-          <p class="card__body">Festival favourites and everyday treats that bring joy to every bite.</p>
+        <div class="relative group">
+          <div class="absolute -top-3 -right-3 w-full h-full bg-brand-orange/10 rounded-2xl transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"></div>
+          <img
+            src="Public/Images/samosas.png"
+            alt="Traditional Indian food preparation"
+            class="relative rounded-2xl shadow-xl w-full object-cover aspect-[4/3] transform transition-transform duration-500 hover:scale-[1.02]"
+            width="560" height="420" loading="lazy"
+          />
+          <div class="absolute left-3 bottom-3 max-w-[12rem] sm:max-w-[16rem] rounded-2xl bg-white/95 px-3 sm:px-4 py-2 sm:py-3 shadow-xl">
+            <p class="text-xs font-semibold uppercase tracking-[0.22em] text-brand-orange mb-1">Small Batch Promise</p>
+            <p class="text-sm text-gray-600">Built around freshness, traceable sourcing, and flavours that stay bold in the pan.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="container">
-      <h2 class="section__title">Get in Touch</h2>
-      <form class="form" onsubmit="handleSubmit(event)">
-        <input class="form__input" type="text" placeholder="Your Name" required/>
-        <input class="form__input" type="email" placeholder="Email Address" required/>
-        <textarea class="form__input form__textarea" placeholder="Your Message" rows="4" required></textarea>
-        <button class="btn" type="submit">Send Message</button>
-        <p class="form__success" id="formSuccess">Thanks! We'll be in touch soon.</p>
-      </form>
+  <!-- ── COMING FROM OUR KITCHEN ──────────────────────────────── -->
+
+
+  <section class="py-12 sm:py-16 lg:py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-10">
+        <div>
+          <p class="text-brand-orange text-xs font-semibold tracking-[0.2em] uppercase mb-1">Fresh &amp; Delicious</p>
+          <h2 class="text-2xl lg:text-3xl font-bold text-gray-900">Coming from our Kitchen</h2>
+        </div>
+        <a href="#" class="hidden sm:inline-flex items-center gap-1 text-sm font-semibold text-brand-green hover:text-brand-green-dark transition-colors duration-200 cursor-pointer">
+          View All
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card template × 4 -->
+        <!-- 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer product-card">
+          <div class="relative overflow-hidden aspect-square">
+            <img src="Public/Images/samosas.png" alt="Crispy Samosas" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"/>
+            <span class="absolute top-3 left-3 bg-brand-green text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow-lg">Snacks</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 mb-1">Crispy Samosas</h3>
+            <p class="text-gray-500 text-sm mb-4 line-clamp-2">Golden-fried pastry pockets filled with spiced potatoes and peas.</p>
+            <a href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-green hover:text-brand-green-dark transition-colors duration-200">
+              View Recipe <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer product-card">
+          <div class="relative overflow-hidden aspect-square">
+            <img src="Public/Images/coconut_rice.png" alt="Coconut Rice" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"/>
+            <span class="absolute top-3 left-3 bg-brand-green text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow-lg">Rice</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 mb-1">Coconut Rice</h3>
+            <p class="text-gray-500 text-sm mb-4 line-clamp-2">Fragrant basmati cooked with fresh coconut and curry leaves.</p>
+            <a href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-green hover:text-brand-green-dark transition-colors duration-200">
+              View Recipe <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer product-card">
+          <div class="relative overflow-hidden aspect-square">
+            <img src="Public/Images/butter_chicken.png" alt="Butter Chicken" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"/>
+            <span class="absolute top-3 left-3 bg-brand-orange text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow-lg">Curries</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 mb-1">Butter Chicken</h3>
+            <p class="text-gray-500 text-sm mb-4 line-clamp-2">Rich, creamy tomato-based curry with tender chicken pieces.</p>
+            <a href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-green hover:text-brand-green-dark transition-colors duration-200">
+              View Recipe <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer product-card">
+          <div class="relative overflow-hidden aspect-square">
+            <img src="Public/Images/gulab_jamun.png" alt="Gulab Jamun" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy"/>
+            <span class="absolute top-3 left-3 bg-brand-green text-white text-[11px] font-semibold px-3 py-1 rounded-full shadow-lg">Sweets</span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 mb-1">Gulab Jamun</h3>
+            <p class="text-gray-500 text-sm mb-4 line-clamp-2">Soft milk-solid dumplings soaked in rose-flavoured sugar syrup.</p>
+            <a href="#" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-green hover:text-brand-green-dark transition-colors duration-200">
+              View Recipe <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination dots -->
+      <div class="flex justify-center gap-2 mt-8" role="tablist" aria-label="Carousel pages">
+        <button class="w-8 h-2 bg-brand-green rounded-full cursor-pointer" aria-label="Page 1" role="tab" aria-selected="true"></button>
+        <button class="w-2 h-2 bg-gray-300 rounded-full cursor-pointer" aria-label="Page 2" role="tab" aria-selected="false"></button>
+        <button class="w-2 h-2 bg-gray-300 rounded-full cursor-pointer" aria-label="Page 3" role="tab" aria-selected="false"></button>
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Bharat Foods. All rights reserved.</p>
+  <!-- ── OUR FAVOURITE THINGS (FEATURED PRODUCTS) ─────────────── -->
+  <section class="py-12 sm:py-16 lg:py-20 bg-white" id="products">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <p class="text-brand-orange text-xs font-semibold tracking-[0.2em] uppercase mb-2">Shop Now</p>
+        <h2 class="text-2xl lg:text-3xl font-bold text-gray-900">Our Favourite Things</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Product card template × 4 -->
+        <!-- 1 -->
+        <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 group cursor-pointer product-card">
+          <div class="relative overflow-hidden aspect-[4/3]">
+            <img src="Public/Images/garam_masala.png" alt="Garam Masala Blend" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute top-0 left-0 right-0 bg-brand-green/90 text-white text-[10px] uppercase tracking-widest font-bold py-1.5 text-center">Spices &amp; Masalas</div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 text-base mb-1">Garam Masala Blend</h3>
+            <p class="text-gray-500 text-xs mb-4">Premium whole spice blend, stone-ground</p>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-extrabold text-brand-green">$8.99</span>
+              <button class="add-to-cart bg-brand-orange hover:bg-brand-orange/90 text-white text-xs font-bold px-5 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 group cursor-pointer product-card">
+          <div class="relative overflow-hidden aspect-[4/3]">
+            <img src="Public/Images/basmati_rice.png" alt="Premium Basmati Rice" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute top-0 left-0 right-0 bg-brand-green/90 text-white text-[10px] uppercase tracking-widest font-bold py-1.5 text-center">Rice &amp; Grains</div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 text-base mb-1">Premium Basmati Rice</h3>
+            <p class="text-gray-500 text-xs mb-4">Aged long-grain, naturally aromatic</p>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-extrabold text-brand-green">$12.99</span>
+              <button class="add-to-cart bg-brand-orange hover:bg-brand-orange/90 text-white text-xs font-bold px-5 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 group cursor-pointer product-card">
+          <div class="relative overflow-hidden aspect-[4/3]">
+            <img src="Public/Images/mango_pickle.png" alt="Traditional Mango Pickle" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute top-0 left-0 right-0 bg-brand-green/90 text-white text-[10px] uppercase tracking-widest font-bold py-1.5 text-center">Pickles &amp; Chutneys</div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 text-base mb-1">Traditional Mango Pickle</h3>
+            <p class="text-gray-500 text-xs mb-4">Sun-dried raw mango, mustard oil blend</p>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-extrabold text-brand-green">$6.99</span>
+              <button class="add-to-cart bg-brand-orange hover:bg-brand-orange/90 text-white text-xs font-bold px-5 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 group cursor-pointer product-card">
+          <div class="relative overflow-hidden aspect-[4/3]">
+            <img src="Public/Images/besan_ladoo.png" alt="Besan Ladoo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute top-0 left-0 right-0 bg-brand-green/90 text-white text-[10px] uppercase tracking-widest font-bold py-1.5 text-center">Sweets &amp; Snacks</div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 text-base mb-1">Besan Ladoo</h3>
+            <p class="text-gray-500 text-xs mb-4">Handcrafted chickpea flour sweets</p>
+            <div class="flex items-center justify-between">
+              <span class="text-lg font-extrabold text-brand-green">$9.99</span>
+              <button class="add-to-cart bg-brand-orange hover:bg-brand-orange/90 text-white text-xs font-bold px-5 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="#" class="inline-block border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white font-semibold px-10 py-3 rounded-full transition-all duration-200 cursor-pointer">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHY CHOOSE US ─────────────────────────────────────────── -->
+  <section class="relative py-14 sm:py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0" aria-hidden="true">
+      <img src="Public/Images/Hero image.webp" alt="" class="w-full h-full object-cover"/>
+      <div class="absolute inset-0 bg-brand-green-dark/85"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <!-- Checklist -->
+        <div class="text-white">
+          <p class="text-brand-amber text-xs font-semibold tracking-[0.2em] uppercase mb-3">Our Commitment</p>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8">Why Choose <span class="logo-font text-3xl sm:text-4xl lg:text-5xl">Bharat</span>?</h2>
+          <ul class="space-y-5">
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center mt-0.5">
+                <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              <div>
+                <h4 class="font-semibold text-base mb-1">100% Natural Ingredients</h4>
+                <p class="text-green-100 text-sm leading-relaxed">No artificial colours, flavours or preservatives. Just pure, wholesome goodness.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center mt-0.5">
+                <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              <div>
+                <h4 class="font-semibold text-base mb-1">Sourced Directly from Farmers</h4>
+                <p class="text-green-100 text-sm leading-relaxed">We work directly with trusted Indian farmers to ensure freshness and fair trade.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center mt-0.5">
+                <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              <div>
+                <h4 class="font-semibold text-base mb-1">Authentic Traditional Recipes</h4>
+                <p class="text-green-100 text-sm leading-relaxed">Generations of culinary wisdom preserved in every product we offer.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center mt-0.5">
+                <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              <div>
+                <h4 class="font-semibold text-base mb-1">Quality Assured &amp; Lab Tested</h4>
+                <p class="text-green-100 text-sm leading-relaxed">Every batch is tested to meet our stringent quality standards.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Stats grid -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center text-white">
+            <p class="text-4xl font-bold text-brand-amber mb-1">500+</p>
+            <p class="text-sm text-green-100">Products Range</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center text-white">
+            <p class="text-4xl font-bold text-brand-amber mb-1">50k+</p>
+            <p class="text-sm text-green-100">Happy Customers</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center text-white">
+            <p class="text-4xl font-bold text-brand-amber mb-1">15+</p>
+            <p class="text-sm text-green-100">Years of Heritage</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center text-white">
+            <p class="text-4xl font-bold text-brand-amber mb-1">100%</p>
+            <p class="text-sm text-green-100">Natural &amp; Pure</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── THE PROMISE ───────────────────────────────────────────── -->
+  <section class="py-12 sm:py-16 lg:py-24" style="background-color:#E8F4F8;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="text-brand-orange text-xs font-semibold tracking-[0.2em] uppercase mb-2">Our Values</p>
+        <h2 class="text-2xl lg:text-3xl font-bold text-gray-900">The <span class="logo-font text-brand-green text-3xl lg:text-4xl">Bharat</span> Promise</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 1 -->
+        <div class="bg-white rounded-2xl p-6 text-center hover:shadow-md transition-shadow duration-200">
+          <div class="w-16 h-16 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Family Owned</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">A family business built on love, trust, and generations of culinary passion.</p>
+        </div>
+        <!-- 2 -->
+        <div class="bg-white rounded-2xl p-6 text-center hover:shadow-md transition-shadow duration-200">
+          <div class="w-16 h-16 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Made with Love</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Every recipe carries the warmth of home cooking and the care of a loving kitchen.</p>
+        </div>
+        <!-- 3 -->
+        <div class="bg-white rounded-2xl p-6 text-center hover:shadow-md transition-shadow duration-200">
+          <div class="w-16 h-16 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Quality Ingredients</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Only the finest, hand-selected ingredients make it into our products.</p>
+        </div>
+        <!-- 4 -->
+        <div class="bg-white rounded-2xl p-6 text-center hover:shadow-md transition-shadow duration-200">
+          <div class="w-16 h-16 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Fast Delivery</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Fresh to your door with reliable, tracked shipping across Australia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ──────────────────────────────────────────── -->
+  <section class="py-12 sm:py-16 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10 sm:mb-12">
+        <p class="text-brand-orange text-xs font-semibold tracking-[0.2em] uppercase mb-2">Reviews</p>
+        <h2 class="text-2xl lg:text-3xl font-bold text-gray-900">Fulfilment Ambassadors</h2>
+      </div>
+      <!-- Stars helper -->
+      <template id="starFull">
+        <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      </template>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
+        <!-- 1 -->
+        <div class="text-center">
+          <img src="https://placehold.co/100x100/E8F4F8/2D6A2F?text=A" alt="Customer Anjali Sharma" class="w-24 h-24 rounded-full object-cover mx-auto border-4 border-brand-green mb-4" loading="lazy" width="100" height="100"/>
+          <div class="flex justify-center gap-0.5 mb-3" aria-label="5 out of 5 stars">
+            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-600 text-sm italic leading-relaxed mb-3">"The spices from Bharat Foods have completely transformed my cooking. Finally, authentic flavours that remind me of home!"</p>
+          <p class="font-semibold text-gray-900 text-sm">Anjali Sharma</p>
+          <p class="text-gray-400 text-xs">Melbourne, VIC</p>
+        </div>
+        <!-- 2 -->
+        <div class="text-center">
+          <img src="https://placehold.co/100x100/FDF8F0/E07B1A?text=R" alt="Customer Rajan Patel" class="w-24 h-24 rounded-full object-cover mx-auto border-4 border-brand-orange mb-4" loading="lazy" width="100" height="100"/>
+          <div class="flex justify-center gap-0.5 mb-3" aria-label="5 out of 5 stars">
+            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-600 text-sm italic leading-relaxed mb-3">"Best basmati rice I've had outside of India. The quality is exceptional and it cooks perfectly every time."</p>
+          <p class="font-semibold text-gray-900 text-sm">Rajan Patel</p>
+          <p class="text-gray-400 text-xs">Sydney, NSW</p>
+        </div>
+        <!-- 3 -->
+        <div class="text-center">
+          <img src="https://placehold.co/100x100/E8F4F8/2D6A2F?text=P" alt="Customer Priya Nair" class="w-24 h-24 rounded-full object-cover mx-auto border-4 border-brand-green mb-4" loading="lazy" width="100" height="100"/>
+          <div class="flex justify-center gap-0.5 mb-3" aria-label="4 out of 5 stars">
+            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-gray-600 text-sm italic leading-relaxed mb-3">"The mango pickle is absolutely divine. My whole family loves it and we order a new jar every month without fail."</p>
+          <p class="font-semibold text-gray-900 text-sm">Priya Nair</p>
+          <p class="text-gray-400 text-xs">Brisbane, QLD</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BRAND BANNER / NEWSLETTER ────────────────────────────── -->
+  <section class="py-12 sm:py-16 lg:py-20 bg-brand-amber">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="logo-font text-5xl sm:text-7xl lg:text-9xl text-white font-bold block mb-3 drop-shadow" aria-label="Bharat">Bharat</span>
+      <p class="text-white/90 text-base font-medium mb-8">Stay connected for new arrivals, seasonal specials &amp; authentic recipes.</p>
+      <form class="flex flex-col sm:flex-row gap-3 max-w-xs sm:max-w-sm mx-auto w-full px-2 sm:px-0">
+        <label for="emailInput" class="sr-only">Email address</label>
+        <input
+          id="emailInput"
+          type="email"
+          placeholder="Enter your email address"
+          class="flex-1 px-5 py-3 rounded-full text-gray-800 font-medium focus:outline-none focus:ring-2 focus:ring-white text-sm"
+          required
+        />
+        <button type="submit" class="bg-brand-green-dark hover:bg-brand-green text-white font-semibold px-8 py-3 rounded-full transition-colors duration-200 cursor-pointer whitespace-nowrap">
+          Subscribe
+        </button>
+      </form>
+      <p id="newsletterMessage" class="mt-4 text-sm text-white/90 opacity-0 transition-opacity duration-300">Thanks for joining. We'll send seasonal launches and recipe ideas your way.</p>
+      <!-- Social links -->
+      <div class="flex justify-center gap-6 mt-10">
+        <a href="#" class="text-white hover:text-white/70 transition-colors duration-200 cursor-pointer" aria-label="Facebook">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="#" class="text-white hover:text-white/70 transition-colors duration-200 cursor-pointer" aria-label="Instagram">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="#" class="text-white hover:text-white/70 transition-colors duration-200 cursor-pointer" aria-label="X / Twitter">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" class="text-white hover:text-white/70 transition-colors duration-200 cursor-pointer" aria-label="YouTube">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────────────── -->
+  <footer class="relative text-white py-14 overflow-hidden" id="contact" style="background: none;">
+    <div class="absolute inset-0 z-0">
+      <img src="Public/Images/foother bg.webp" alt="Footer background" class="w-full h-full object-cover object-center" style="opacity:1;" loading="lazy" />
+      <div style="background:rgba(18,31,19,0.88); position:absolute; inset:0;"></div>
+    </div>
+    <div class="relative z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <!-- Brand -->
+        <div class="flex flex-col items-start gap-2">
+          <img src="Public/Images/Logo.jpeg" alt="Bharat Foods logo" class="h-12 w-auto mb-1" loading="lazy" />
+          <span class="logo-font text-3xl text-white">Bharat</span>
+          <p class="text-[10px] font-semibold tracking-[0.25em] uppercase text-brand-amber mb-4">Foods</p>
+          <p class="text-green-200 text-sm leading-relaxed">Bringing the authentic flavours of India to your table. Pure, natural, and crafted with love.</p>
+        </div>
+        <!-- Products -->
+        <div>
+          <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Products</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-green-300 text-sm hover:text-white transition-colors duration-200">Spices &amp; Masalas</a></li>
+            <li><a href="#" class="text-green-300 text-sm hover:text-white transition-colors duration-200">Rice &amp; Grains</a></li>
+            <li><a href="#" class="text-green-300 text-sm hover:text-white transition-colors duration-200">Pickles &amp; Chutneys</a></li>
+            <li><a href="#" class="text-green-300 text-sm hover:text-white transition-colors duration-200">Sweets &amp; Snacks</a></li>
+            <li><a href="#" class="text-green-300 text-sm hover:text-white transition-colors duration-200">Ready-to-Cook</a></li>
+          </ul>
+        </div>
+        <!-- Company -->
+        <div>
+          <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Company</h4>
+          <ul class="space-y-2">
+            <li><a href="#about"   class="text-green-300 text-sm hover:text-white transition-colors duration-200">About Us</a></li>
+            <li><a href="#"        class="text-green-300 text-sm hover:text-white transition-colors duration-200">Blog</a></li>
+            <li><a href="#"        class="text-green-300 text-sm hover:text-white transition-colors duration-200">Careers</a></li>
+            <li><a href="#"        class="text-green-300 text-sm hover:text-white transition-colors duration-200">Privacy Policy</a></li>
+            <li><a href="#"        class="text-green-300 text-sm hover:text-white transition-colors duration-200">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div>
+          <h4 class="text-white font-semibold text-xs uppercase tracking-widest mb-4">Contact</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-4 h-4 text-brand-amber mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span class="text-green-300 text-sm">123 Spice Lane, Melbourne VIC 3000</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-4 h-4 text-brand-amber flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <a href="mailto:hello@bharatfoods.com.au" class="text-green-300 text-sm hover:text-white transition-colors duration-200">hello@bharatfoods.com.au</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-4 h-4 text-brand-amber flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <a href="tel:+61300000000" class="text-green-300 text-sm hover:text-white transition-colors duration-200">+61 3 0000 0000</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-green-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+        <p class="text-green-500 text-xs">&copy; 2026 Bharat Foods. All rights reserved.</p>
+        <div class="flex gap-5">
+          <a href="#" class="text-green-500 text-xs hover:text-white transition-colors duration-200">Privacy Policy</a>
+          <a href="#" class="text-green-500 text-xs hover:text-white transition-colors duration-200">Terms of Service</a>
+          <a href="#" class="text-green-500 text-xs hover:text-white transition-colors duration-200">Sitemap</a>
+        </div>
+      </div>
+    </div>
     </div>
   </footer>
+
+  <div id="statusToast" class="fixed right-4 bottom-4 z-[70] max-w-xs rounded-2xl bg-brand-green-dark px-5 py-4 text-white shadow-2xl opacity-0 translate-y-6 pointer-events-none transition-all duration-300">
+    <p class="text-xs uppercase tracking-[0.22em] text-brand-amber mb-1">Bharat Foods</p>
+    <p id="statusToastText" class="text-sm leading-relaxed">Update</p>
+  </div>
 
   <script src="script.js"></script>
 </body>

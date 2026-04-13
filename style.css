@@ -1,210 +1,115 @@
-/* ── Reset & Base ─────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── DESIGN SYSTEM ────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
 
 :root {
-  --saffron:  #FF9933;
-  --green:    #138808;
-  --dark:     #1a1a1a;
-  --light:    #fdf8f2;
-  --alt:      #fff7ed;
-  --text:     #333;
-  --muted:    #666;
-  --radius:   12px;
-  --max:      1100px;
+  --brand-green: #2D6A2F;
+  --brand-green-dark: #1A3D1B;
+  --brand-green-light: #4A8C4D;
+  --brand-orange: #E07B1A;
+  --brand-amber: #F59E0B;
+  --font-sans:    'Poppins',     sans-serif; /* body, paragraphs, buttons */
+  --font-heading: 'Winky Sans',  sans-serif; /* all headings + brand display */
 }
 
-html { scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%; /* prevent iOS font scale on rotate */
+}
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  color: var(--text);
-  background: var(--light);
+  font-family: var(--font-sans);
+  font-size: 16px; /* WCAG: minimum 16px body text on mobile */
+  color: #1f2937;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background: #fcfbf7;
+  overscroll-behavior: contain; /* prevent accidental pull-to-refresh */
+  overflow-x: hidden; /* prevent horizontal scroll on mobile */
 }
 
-/* ── Container ────────────────────────────────── */
-.container {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 24px;
+::selection {
+  background: rgba(245, 158, 11, 0.75);
+  color: #1A3D1B;
 }
 
-/* ── Nav ──────────────────────────────────────── */
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #fff;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-  padding: 16px 0;
-}
-
-.nav__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav__logo {
-  font-size: 1.25rem;
+/* ── TYPOGRAPHY ───────────────────────────────────────────── */
+/* Winky Sans — headings & brand display elements only */
+h1, h2, h3, h4, h5, h6,
+.logo-font,
+.font-display {
+  font-family: var(--font-heading);
   font-weight: 700;
-  color: var(--saffron);
-  text-decoration: none;
-  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
-.nav__links {
-  list-style: none;
-  display: flex;
-  gap: 32px;
+/* Poppins — body copy, labels, buttons */
+p, span, a, li, input, textarea, select, button, label {
+  font-family: var(--font-sans);
 }
 
-.nav__links a {
-  text-decoration: none;
-  color: var(--text);
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: color 0.2s;
+/* ── COMPONENTS ───────────────────────────────────────────── */
+.btn-primary {
+  background-color: var(--brand-green);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav__links a:hover { color: var(--saffron); }
-
-/* ── Hero ─────────────────────────────────────── */
-.hero {
-  background: linear-gradient(135deg, #fff7ed 0%, #fff3e0 100%);
-  border-bottom: 3px solid var(--saffron);
-  padding: 100px 0;
+.btn-primary:hover {
+  background-color: var(--brand-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.hero__inner { text-align: center; }
-
-.hero__title {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 800;
-  line-height: 1.1;
-  color: var(--dark);
-  margin-bottom: 16px;
+.product-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero__title span { color: var(--saffron); }
-
-.hero__sub {
-  font-size: 1.1rem;
-  color: var(--muted);
-  margin-bottom: 36px;
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* ── Button ───────────────────────────────────── */
-.btn {
-  display: inline-block;
-  background: var(--saffron);
-  color: #fff;
-  font-weight: 700;
-  font-size: 1rem;
-  padding: 14px 36px;
-  border-radius: 100px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.2s, transform 0.15s;
+.product-card img {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn:hover { background: #e8851a; transform: translateY(-1px); }
-
-/* ── Sections ─────────────────────────────────── */
-.section { padding: 80px 0; }
-.section--alt { background: var(--alt); }
-
-.section__title {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 800;
-  color: var(--dark);
-  margin-bottom: 20px;
+.product-card:hover img {
+  transform: scale(1.08);
 }
 
-.section__body {
-  font-size: 1.05rem;
-  color: var(--muted);
-  max-width: 600px;
-  line-height: 1.8;
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid rgba(245, 158, 11, 0.85);
+  outline-offset: 3px;
 }
 
-/* ── Product Grid ─────────────────────────────── */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
 }
 
-.card {
-  background: #fff;
-  border-radius: var(--radius);
-  padding: 32px 24px;
-  border: 1px solid rgba(0,0,0,0.07);
-  transition: transform 0.2s, box-shadow 0.2s;
+/* ── UTILITIES ────────────────────────────────────────────── */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+/* Fix for Hero section overlapping */
+main {
+  padding-top: 0; /* Header is sticky */
 }
 
-.card__icon { font-size: 2.5rem; margin-bottom: 16px; }
-
-.card__title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--dark);
-  margin-bottom: 8px;
+/* ── ANIMATIONS ───────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.card__body { font-size: 0.92rem; color: var(--muted); }
-
-/* ── Form ─────────────────────────────────────── */
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 520px;
-  margin-top: 36px;
-}
-
-.form__input {
-  padding: 14px 18px;
-  border: 1.5px solid rgba(0,0,0,0.12);
-  border-radius: var(--radius);
-  font-size: 1rem;
-  font-family: inherit;
-  background: #fff;
-  transition: border-color 0.2s;
-  outline: none;
-}
-
-.form__input:focus { border-color: var(--saffron); }
-.form__textarea { resize: vertical; }
-
-.form__success {
-  display: none;
-  color: var(--green);
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-.form__success.visible { display: block; }
-
-/* ── Footer ───────────────────────────────────── */
-.footer {
-  background: var(--dark);
-  color: rgba(255,255,255,0.4);
-  padding: 28px 0;
-  font-size: 0.875rem;
-  text-align: center;
-}
-
-/* ── Responsive ───────────────────────────────── */
-@media (max-width: 600px) {
-  .nav__links { gap: 20px; }
-  .hero { padding: 70px 0; }
-  .section { padding: 56px 0; }
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
 }
