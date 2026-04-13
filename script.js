@@ -84,6 +84,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Category tab switching
+    document.querySelectorAll('.cat-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Reset all tabs
+            document.querySelectorAll('.cat-tab').forEach(t => {
+                t.classList.remove('bg-brand-green', 'text-white', 'border-brand-green');
+                t.classList.add('bg-white', 'text-gray-600', 'border-gray-300');
+                t.setAttribute('aria-selected', 'false');
+            });
+            // Activate clicked tab
+            tab.classList.add('bg-brand-green', 'text-white', 'border-brand-green');
+            tab.classList.remove('bg-white', 'text-gray-600', 'border-gray-300');
+            tab.setAttribute('aria-selected', 'true');
+            // Hide all panels, show matching
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('hidden'));
+            const target = document.getElementById('tab-' + tab.dataset.tab);
+            if (target) target.classList.remove('hidden');
+        });
+    });
+
     // Newsletter form
     const newsletterForm = document.getElementById('emailInput')?.closest('form');
     if (newsletterForm) {
