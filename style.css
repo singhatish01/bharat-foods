@@ -117,11 +117,13 @@ main {
 .hero-banner {
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;
+  background-size: 100% auto;
+  aspect-ratio: 390 / 440;
 }
 
 @media (min-width: 640px) {
   .hero-banner {
+    aspect-ratio: auto;
     background-position: center center;
     background-size: cover;
   }
