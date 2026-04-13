@@ -99,13 +99,16 @@
   </section>
 
   <!-- ── TAGLINE / ABOUT ────────────────────────────────────────── -->
-  <section class="py-16 sm:py-20 lg:py-28 bg-[#f0f2f5] relative overflow-hidden" id="about">
-    <!-- Illustration slots — absolute, outside the content column -->
-    <div class="absolute left-0 top-0 bottom-0 w-32 sm:w-44 lg:w-56 pointer-events-none" aria-hidden="true">
-      <!-- Left illustration goes here -->
+  <section class="py-16 sm:py-20 lg:py-28 bg-white relative overflow-hidden" id="about">
+
+    <!-- Left illustration slot -->
+    <div class="absolute left-0 bottom-0 pointer-events-none select-none" aria-hidden="true">
+      <!-- LEFT SVG ILLUSTRATION — paste here -->
     </div>
-    <div class="absolute right-0 top-0 bottom-0 w-32 sm:w-44 lg:w-56 pointer-events-none" aria-hidden="true">
-      <!-- Right illustration goes here -->
+
+    <!-- Right illustration slot -->
+    <div class="absolute right-0 bottom-0 pointer-events-none select-none" aria-hidden="true">
+      <!-- RIGHT SVG ILLUSTRATION — paste here -->
     </div>
 
     <div class="max-w-7xl mx-auto px-16 sm:px-24 lg:px-32">
@@ -132,159 +135,6 @@
         </div>
 
       </div>
-    </div>
-  </section>
-
-  <!-- ── CHOOSE OUR BEST CATEGORY ────────────────────────────── -->
-  <section class="py-12 sm:py-16 lg:py-20 bg-gray-50" id="categories">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-      <!-- Header -->
-      <div class="text-center mb-10">
-        <span class="inline-block text-brand-orange text-xs font-semibold tracking-[0.2em] uppercase mb-3">Choose Our Best Category</span>
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">A Journey of Flavors, A Legacy of Trust</h2>
-        <p class="text-gray-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">Explore our handpicked categories of authentic Indian products — sourced with care and crafted with generations of love.</p>
-      </div>
-
-      <!-- Tabs -->
-      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10" role="tablist" aria-label="Product categories">
-        <button class="cat-tab px-4 sm:px-6 py-2.5 rounded-full border text-sm font-medium transition-all duration-200 bg-brand-green text-white border-brand-green cursor-pointer" data-tab="frozen" role="tab" aria-selected="true" aria-controls="tab-frozen">
-          Bharat Frozen Vegetables
-        </button>
-        <button class="cat-tab px-4 sm:px-6 py-2.5 rounded-full border text-sm font-medium transition-all duration-200 bg-white text-gray-600 border-gray-300 hover:border-brand-green hover:text-brand-green cursor-pointer" data-tab="seeds" role="tab" aria-selected="false" aria-controls="tab-seeds">
-          Edible Seeds
-        </button>
-        <button class="cat-tab px-4 sm:px-6 py-2.5 rounded-full border text-sm font-medium transition-all duration-200 bg-white text-gray-600 border-gray-300 hover:border-brand-green hover:text-brand-green cursor-pointer" data-tab="snacks" role="tab" aria-selected="false" aria-controls="tab-snacks">
-          Snacks
-        </button>
-        <button class="cat-tab px-4 sm:px-6 py-2.5 rounded-full border text-sm font-medium transition-all duration-200 bg-white text-gray-600 border-gray-300 hover:border-brand-green hover:text-brand-green cursor-pointer" data-tab="bakery" role="tab" aria-selected="false" aria-controls="tab-bakery">
-          Bharat Bakery
-        </button>
-      </div>
-
-      <!-- ── Tab: Bharat Frozen Vegetables ── -->
-      <div id="tab-frozen" class="tab-panel" role="tabpanel">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <!-- Card 1 -->
-          <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 p-5 flex flex-col">
-            <div class="w-full aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-              <svg class="w-14 h-14 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="font-bold text-gray-900 mb-1">Mixed Vegetables</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">Farm-fresh mixed vegetables, flash-frozen to lock in nutrients and flavour.</p>
-            <button class="w-full border border-brand-green text-brand-green hover:bg-brand-green hover:text-white text-sm font-semibold py-2.5 rounded-lg transition-colors duration-200 cursor-pointer">View Products</button>
-          </div>
-          <!-- Card 2 -->
-          <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 p-5 flex flex-col">
-            <div class="w-full aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-              <svg class="w-14 h-14 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="font-bold text-gray-900 mb-1">Frozen Spinach Cubes</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">Blanched and frozen spinach portions — ready to drop straight into curries.</p>
-            <button class="w-full border border-brand-green text-brand-green hover:bg-brand-green hover:text-white text-sm font-semibold py-2.5 rounded-lg transition-colors duration-200 cursor-pointer">View Products</button>
-          </div>
-          <!-- Card 3 -->
-          <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 p-5 flex flex-col">
-            <div class="w-full aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-              <svg class="w-14 h-14 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="font-bold text-gray-900 mb-1">Green Peas</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">Sweet, tender garden peas harvested at peak ripeness and flash-frozen.</p>
-            <button class="w-full border border-brand-green text-brand-green hover:bg-brand-green hover:text-white text-sm font-semibold py-2.5 rounded-lg transition-colors duration-200 cursor-pointer">View Products</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── Tab: Edible Seeds ── -->
-      <div id="tab-seeds" class="tab-panel hidden" role="tabpanel">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 p-5 flex flex-col">
-            <div class="w-full aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-              <svg class="w-14 h-14 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="font-bold text-gray-900 mb-1">White Sesame Seeds</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">Naturally hulled, rich in calcium and perfect for chutneys, breads, and sweets.</p>
-            <button class="w-full border border-brand-green text-brand-green hover:bg-brand-green hover:text-white text-sm font-semibold py-2.5 rounded-lg transition-colors duration-200 cursor-pointer">View Products</button>
-          </div>
-          <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 p-5 flex flex-col">
-            <div class="w-full aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-              <svg class="w-14 h-14 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="font-bold text-gray-900 mb-1">Golden Flax Seeds</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">Cold-pressed golden flax seeds packed with omega-3 and dietary fibre.</p>
-            <button class="w-full border border-brand-green text-brand-green hover:bg-brand-green hover:text-white text-sm font-semibold py-2.5 rounded-lg transition-colors duration-200 cursor-pointer">View Products</button>
-          </div>
-          <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 p-5 flex flex-col">
-            <div class="w-full aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-              <svg class="w-14 h-14 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="font-bold text-gray-900 mb-1">Chia Seeds</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">Premium organic chia seeds — a powerhouse of protein, fibre, and antioxidants.</p>
-            <button class="w-full border border-brand-green text-brand-green hover:bg-brand-green hover:text-white text-sm font-semibold py-2.5 rounded-lg transition-colors duration-200 cursor-pointer">View Products</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── Tab: Snacks ── -->
-      <div id="tab-snacks" class="tab-panel hidden" role="tabpanel">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 p-5 flex flex-col">
-            <div class="w-full aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-              <svg class="w-14 h-14 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="font-bold text-gray-900 mb-1">Crispy Samosas</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">Golden pastry pockets filled with spiced potatoes and peas — ready to fry.</p>
-            <button class="w-full border border-brand-green text-brand-green hover:bg-brand-green hover:text-white text-sm font-semibold py-2.5 rounded-lg transition-colors duration-200 cursor-pointer">View Products</button>
-          </div>
-          <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 p-5 flex flex-col">
-            <div class="w-full aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-              <svg class="w-14 h-14 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="font-bold text-gray-900 mb-1">Chakli</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">Spiral rice flour snack, lightly spiced and fried to a satisfying crunch.</p>
-            <button class="w-full border border-brand-green text-brand-green hover:bg-brand-green hover:text-white text-sm font-semibold py-2.5 rounded-lg transition-colors duration-200 cursor-pointer">View Products</button>
-          </div>
-          <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 p-5 flex flex-col">
-            <div class="w-full aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-              <svg class="w-14 h-14 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="font-bold text-gray-900 mb-1">Murukku</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">Traditional South Indian savoury twists made from rice and urad dal flour.</p>
-            <button class="w-full border border-brand-green text-brand-green hover:bg-brand-green hover:text-white text-sm font-semibold py-2.5 rounded-lg transition-colors duration-200 cursor-pointer">View Products</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── Tab: Bharat Bakery ── -->
-      <div id="tab-bakery" class="tab-panel hidden" role="tabpanel">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 p-5 flex flex-col">
-            <div class="w-full aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-              <svg class="w-14 h-14 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="font-bold text-gray-900 mb-1">Garlic Naan</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">Soft, fluffy naan brushed with garlic butter — straight from a tandoor-style oven.</p>
-            <button class="w-full border border-brand-green text-brand-green hover:bg-brand-green hover:text-white text-sm font-semibold py-2.5 rounded-lg transition-colors duration-200 cursor-pointer">View Products</button>
-          </div>
-          <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 p-5 flex flex-col">
-            <div class="w-full aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-              <svg class="w-14 h-14 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="font-bold text-gray-900 mb-1">Aloo Paratha</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">Whole-wheat flatbread stuffed with spiced mashed potato — a breakfast classic.</p>
-            <button class="w-full border border-brand-green text-brand-green hover:bg-brand-green hover:text-white text-sm font-semibold py-2.5 rounded-lg transition-colors duration-200 cursor-pointer">View Products</button>
-          </div>
-          <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 p-5 flex flex-col">
-            <div class="w-full aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-              <svg class="w-14 h-14 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="font-bold text-gray-900 mb-1">Tandoori Roti</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">Lightly charred whole-wheat roti baked in a traditional tandoor for authentic taste.</p>
-            <button class="w-full border border-brand-green text-brand-green hover:bg-brand-green hover:text-white text-sm font-semibold py-2.5 rounded-lg transition-colors duration-200 cursor-pointer">View Products</button>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
