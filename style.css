@@ -129,8 +129,27 @@ main {
   height: auto;
 }
 
+.about-section-art {
+  background-image:
+    url("Public/Images/Our story sectin hompage/left.svg"),
+    url("Public/Images/Our story sectin hompage/right.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, right bottom;
+  background-size: 10rem auto, 5.25rem auto;
+}
+
 @media (min-width: 640px) {
   .hero-banner {
     aspect-ratio: auto;
+  }
+
+  .about-section-art {
+    background-size: 13rem auto, 7rem auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-section-art {
+    background-size: 18rem auto, 9rem auto;
   }
 }
