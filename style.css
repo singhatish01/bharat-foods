@@ -113,3 +113,16 @@ main {
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }
+
+.hero-banner {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+}
+
+@media (min-width: 640px) {
+  .hero-banner {
+    background-position: center center;
+    background-size: cover;
+  }
+}
