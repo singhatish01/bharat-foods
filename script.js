@@ -2,7 +2,7 @@
 
 function handleContact(e) {
   e.preventDefault();
-  const msg = document.getElementById('contactMessage');
+  const msg = document.getElementById('contactSuccessMsg');
   msg.style.opacity = '1';
   e.target.reset();
   setTimeout(() => { msg.style.opacity = '0'; }, 5000);
