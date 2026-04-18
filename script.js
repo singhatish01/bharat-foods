@@ -1,5 +1,13 @@
 /* ── INTERACTIVITY ────────────────────────────────────────── */
 
+function handleContact(e) {
+  e.preventDefault();
+  const msg = document.getElementById('contactMessage');
+  msg.style.opacity = '1';
+  e.target.reset();
+  setTimeout(() => { msg.style.opacity = '0'; }, 5000);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile menu toggle
     const menuBtn = document.getElementById('menuBtn');
